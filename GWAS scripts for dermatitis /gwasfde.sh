@@ -7,7 +7,7 @@
 #$ -l h_vmem=10G                # Request 10 GB of RAM per core
 #$ -cwd                         # Run the job from the current working directory
 #$ -l h_rt=72:0:0               # Request 72 hours of runtime
-#$ -N allde                     # Name the job "allde"
+#$ -N femalesde                 # Name the job "femalesde"
 #$ -t 1-22                      # Array job with tasks from 1 to 22 (for chromosome 1 to 22)
 #$ -j y                         # Merge standard error with standard output
 
