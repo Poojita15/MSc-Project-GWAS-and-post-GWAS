@@ -1,8 +1,8 @@
 ########################
-# remove all NA values from summary statistics obtained by runnin munge_sumstats.py
+# remove all NA values from summary statistics obtained by running munge_sumstats.py
 ########################
 
-cd /data/scratch/bt23718/GWAS_project/ldsc/data/pd/
+cd /data/scratch/bt23718/GWAS_project/ldsc/data/pd
 
 module load R
 
@@ -32,7 +32,7 @@ data<- read.table(data, header=TRUE, sep="\t", stringsAsFactors=FALSE)
 filtered_data <- data[complete.cases(data[, -1]), ]
 write.table(filtered_data, file="mpd.sumstats", sep="\t", quote=FALSE, row.names=FALSE, col.names=TRUE)
 
-cd /data/scratch/bt23718/GWAS_project/ldsc/data/pd/
+cd /data/scratch/bt23718/GWAS_project/ldsc/data/de
 
 #for male samples with dermatitis and eczema
 
