@@ -91,11 +91,43 @@ wget ftp://ftp.biostat.wisc.edu/pub/lu_group/Projects/SUPERGNOVA/bfiles/* -P ./d
 #Download partition files 
 wget ftp://ftp.biostat.wisc.edu/pub/lu_group/Projects/SUPERGNOVA/partition/* -P ./data/partition/
 
+#load necessary libraries and packages 
+module load python/3.10.7
+pip install numpy
+pip install spicy
+pip install pandas
+pip install sicikt-learn 
+pip install bitarray
+
 ###############################
 # Installation of LDSC software 
 ###############################
 
 cd /data/scratch/bt23718/GWAS_project
+
+#download 
+git clone https://github.com/bulik/ldsc.git
+cd ldsc
+
+#install anaconda3
+module laod anaconda3
+
+conda env create --file environment.yml
+conda activate ldsc
+
+conda activate myenv
+
+#load necessary libraries and packages 
+module load python/2.7.15
+pip install numpy
+pip install spicy
+pip install pandas
+pip install sicikt-learn 
+pip install bitarray
+
+
+
+
 
 
 
