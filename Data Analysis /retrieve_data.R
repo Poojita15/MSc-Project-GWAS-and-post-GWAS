@@ -67,7 +67,7 @@ der_eczema_df <- cbind(df, der_ecz)
 write.table(der_eczema_df, file = "der_eczema.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
 
 #####################################
-# Create seperate dataframes foor females and males for sex-stratified GWAS analysis
+# Create seperate dataframes for females and males for sex-stratified GWAS analysis
 #####################################
 
 gsex_df1 <- cbind(df, gsex)
@@ -77,3 +77,6 @@ female_df <- subset(gsex_df1, gsex == "Female", select = c("FID", "IID"))
 # Write dataframes to a to a tab-delimited file
 write.table(female_df, file = "females.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
 write.table(male_df, file = "males.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+
+######################################
+
