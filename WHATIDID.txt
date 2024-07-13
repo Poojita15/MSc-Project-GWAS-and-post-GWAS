@@ -1,0 +1,56 @@
+# Change directory to /data/scratch/bt23718/
+cd /data/scratch/bt23718/
+
+# Create a new directory 
+mkdir GWAS_project
+
+#change directory 
+cd /data/scratch/bt23718/GWAS_project
+
+# Create an empty text file named WHATIDID.txt
+touch WHATIDID.txt
+
+# Create directory 
+mkdir papulosquamous_disorders
+
+# Navigate into the papulosquamous_disorders directory
+cd papulosquamous_disorders
+
+# Create a directories
+mkdir allpd 
+mkdir femalespd
+mkdir malespd 
+mkdir fastBAT
+mkdir ./fastBAT/output
+mkdir ./fastBAT/output/pdo
+mkdir ./fastBAT/output/mpd
+mkdir ./fastBAT/output/fpd
+mkdir ./fastBAT/stats 
+mkdir ./fastBAT/stats/allp 
+mkdir ./fastBAT/stats/fp
+mkdir ./fastBAT/stats/mp 
+
+# Navigate back to the parent directory
+cd ..
+
+# Create a directory for dermatitis and eczema
+mkdir dermatitis_eczema 
+
+# Navigate into the dermatitis_eczema directory
+cd dermatitis_eczema 
+
+# Create a directories
+mkdir allde 
+mkdir femalesde
+mkdir malesde
+mkdir fastBAT
+mkdir ./fastBAT/output
+mkdir ./fastBAT/output/deo
+mkdir ./fastBAT/output/fdeo
+mkdir ./fastBAT/output/mdeo
+mkdir ./fastBAT/stats 
+mkdir ./fastBAT/stats/de 
+mkdir ./fastBAT/stats/fde
+mkdir ./fastBAT/stats/mde 
+
+
