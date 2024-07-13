@@ -1,11 +1,16 @@
+###############################################
+GCTA Analysis Script for gene based test 
+all, male and female patients with dermatitis and eczema
+###############################################
+
 #!/bin/bash
-#$ -pe smp 5
-#$ -l h_vmem=10G
-#$ -cwd
-#$ -l h_rt=72:0:0
-#$ -N degene
-#$ -t 1-23
-#$ -j y
+#$ -pe smp 5                    # Request 5 CPU cores
+#$ -l h_vmem=10G                # Request 10 GB of RAM per core
+#$ -cwd                         # Run the job from the current working directory
+#$ -l h_rt=72:0:0               # Request 72 hours of runtime
+#$ -N degene                    # Name the job "degene"
+#$ -t 1-23                      # Array job with tasks from 1 to 23 (for chromosome 1 to 22 and X)
+#$ -j y                         # Merge standard error with standard output
 
 #Run GCTA for fastBAT analysis (all samples)
   
@@ -33,3 +38,6 @@
 --fastBAT-gene-list /data/scratch/bt23718/GWAS_project/papulosquamous_disorders/fastBAT/gene_list.txt \
 --out output/mdeo/mde_${SGE_TASK_ID} \
 --thread-num ${NSLOTS} 
+
+#submit the job
+qsub de.sh 
