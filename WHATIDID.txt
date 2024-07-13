@@ -1,3 +1,6 @@
+###############################
+# Creating main directories to store data 
+###############################
 # Change directory 
 cd /data/scratch/bt23718/
 
@@ -63,6 +66,39 @@ mkdir ./ctgvl/pd
 
 # Navigate back to the parent directory
 cd ..
+
+###############################
+# Installation of SUPERGNOVA software 
+##############################
+
+cd /data/scratch/bt23718/GWAS_project
+
+# Download 
+git clone https://github.com/qlu-lab/SUPERGNOVA
+cd ./SUPERGNOVA
+
+#create directories 
+mkdir ./data
+mkdir ./data/sumstats
+mkdir ./data/sumstats/pd 
+mkdir ./data/sumstats/de 
+mkdir ./data/bfiles
+mkdir ./data/partition
+
+#Download plink files 
+wget ftp://ftp.biostat.wisc.edu/pub/lu_group/Projects/SUPERGNOVA/bfiles/* -P ./data/bfiles/
+
+#Download partition files 
+wget ftp://ftp.biostat.wisc.edu/pub/lu_group/Projects/SUPERGNOVA/partition/* -P ./data/partition/
+
+###############################
+# Installation of LDSC software 
+###############################
+
+cd /data/scratch/bt23718/GWAS_project
+
+
+
 
 
 
