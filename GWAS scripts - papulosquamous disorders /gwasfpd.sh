@@ -1,7 +1,6 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-#GCTA Analysis Script for GWAS -- female patients with psoriasis
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+##################################
+#GCTA Analysis Script for GWAS -- females patients with dermatitis
+##################################
 #!/bin/bash
 #$ -pe smp 5                    # Request 5 CPU cores
 #$ -l h_vmem=10G                # Request 10 GB of RAM per core
@@ -53,3 +52,6 @@
 --info 0.7 \
 --out femalespd/femalespd_all_23 \
 --thread-num ${NSLOTS}
+
+#submit the job 
+qsub gwasfpd.sh
