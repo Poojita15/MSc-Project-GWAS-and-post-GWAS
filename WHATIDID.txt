@@ -1,4 +1,4 @@
-# Change directory to /data/scratch/bt23718/
+# Change directory 
 cd /data/scratch/bt23718/
 
 # Create a new directory 
@@ -16,7 +16,7 @@ mkdir papulosquamous_disorders
 # Navigate into the papulosquamous_disorders directory
 cd papulosquamous_disorders
 
-# Create a directories
+# Create directories
 mkdir allpd 
 mkdir femalespd
 mkdir malespd 
@@ -39,7 +39,7 @@ mkdir dermatitis_eczema
 # Navigate into the dermatitis_eczema directory
 cd dermatitis_eczema 
 
-# Create a directories
+# Create directories
 mkdir allde 
 mkdir femalesde
 mkdir malesde
@@ -52,5 +52,19 @@ mkdir ./fastBAT/stats
 mkdir ./fastBAT/stats/de 
 mkdir ./fastBAT/stats/fde
 mkdir ./fastBAT/stats/mde 
+
+# Navigate back to the parent directory
+cd ..
+
+#create directory for genetic correlation files
+mkdir ctgvl 
+mkdir ./ctgvl/de 
+mkdir ./ctgvl/pd 
+
+# Navigate back to the parent directory
+cd ..
+
+
+
 
 
