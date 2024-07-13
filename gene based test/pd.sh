@@ -1,5 +1,5 @@
 ###############################################
-#GCTA Analysis Script for gene based test all, male and female patients with dermatitis and eczema
+#GCTA Analysis Script for gene based test all, male and female patients with psoriasis
 ###############################################
 
 #!/bin/bash
