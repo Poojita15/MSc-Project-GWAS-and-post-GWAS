@@ -1,5 +1,5 @@
 ##################################
-#GCTA Analysis Script for GWAS -- females patients with dermatitis
+#GCTA Analysis Script for GWAS -- females patients with psoriasis
 ##################################
 #!/bin/bash
 #$ -pe smp 5                    # Request 5 CPU cores
