@@ -9,7 +9,7 @@ data <- na.omit(data)
 data$p <- p.adjust(data$p, method = "bonferroni")
 write.table(data, file = "all_pad", sep = "\t", quote = FALSE, row.names = FALSE, col.names=TRUE)
 significant_data <- data [data$p < 0.05, ]
-write.table(data, file = "all_sigp", sep = "\t", quote = FALSE, row.names = FALSE, col.names=TRUE)
+write.table(significant_data, file = "all_sigp", sep = "\t", quote = FALSE, row.names = FALSE, col.names=TRUE)
 
 # female samples
 
@@ -18,7 +18,7 @@ data <- na.omit(data)
 data$p <- p.adjust(data$p, method = "bonferroni")
 write.table(data, file = "f_pad", sep = "\t", quote = FALSE, row.names = FALSE, col.names=TRUE)
 significant_data <- data [data$p < 0.05, ]
-write.table(data, file = "f_sigp", sep = "\t", quote = FALSE, row.names = FALSE, col.names=TRUE)
+write.table(significant_data, file = "f_sigp", sep = "\t", quote = FALSE, row.names = FALSE, col.names=TRUE)
 
 # male samples
 
