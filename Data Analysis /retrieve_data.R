@@ -36,8 +36,18 @@ gsex_df <- cbind(df, gsex)
 agerectuit_df <- cbind(df, agerectuit, pcs10)
 
 # Write dataframes to a tab-delimited file
-write.table(agerectuit_df, file = "agerectuit.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
-write.table(gsex_df, file = "gsex.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+write.table(agerectuit_df, 
+            file = "agerectuit.txt", 
+            sep = "\t", 
+            quote = FALSE, 
+            row.names = FALSE, 
+            col.names = TRUE)
+write.table(gsex_df, 
+            file = "gsex.txt", 
+            sep = "\t", 
+            quote = FALSE, 
+            row.names = FALSE, 
+            col.names = TRUE)
 
 #####################################
 # create phenotypic files for GWAS analysis 
@@ -54,7 +64,12 @@ pap_dis <- icd10.2[, pd]
 pap_dis_df <- cbind(df, pap_dis)
 
 # Write dataframe to a tab-delimited file
-write.table(pap_dis_df, file = "papulosquamous_disorders.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+write.table(pap_dis_df, 
+            file = "papulosquamous_disorders.txt", 
+            sep = "\t", 
+            quote = FALSE, 
+            row.names = FALSE, 
+            col.names = TRUE)
 
 # Extract ICD-10 codes relevant to dermatitis and eczema disorders
 de <- c(939, 842, 1067, 783, 847, 894, 980, 461, 808, 776, 459)
@@ -64,7 +79,12 @@ der_ecz <- icd10.2[, de]
 der_eczema_df <- cbind(df, der_ecz)
 
 # Write dataframes to a to a tab-delimited file
-write.table(der_eczema_df, file = "der_eczema.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+write.table(der_eczema_df, 
+            file = "der_eczema.txt", 
+            sep = "\t", 
+            quote = FALSE, 
+            row.names = FALSE, 
+            col.names = TRUE)
 
 #####################################
 # Create seperate dataframes for females and males for sex-stratified GWAS analysis
@@ -75,8 +95,17 @@ male_df <- subset(gsex_df1, gsex == "Male", select = c("FID", "IID"))
 female_df <- subset(gsex_df1, gsex == "Female", select = c("FID", "IID"))
 
 # Write dataframes to a to a tab-delimited file
-write.table(female_df, file = "females.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
-write.table(male_df, file = "males.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+write.table(female_df, 
+            file = "females.txt", 
+            sep = "\t", quote = FALSE, 
+            row.names = FALSE, 
+            col.names = TRUE)
+write.table(male_df, 
+            file = "males.txt", 
+            sep = "\t", 
+            quote = FALSE, 
+            row.names = FALSE, 
+            col.names = TRUE)
 
 ######################################
 
