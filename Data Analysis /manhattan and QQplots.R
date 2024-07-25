@@ -15,5 +15,21 @@ install.packages("qqman")
 
 library(qqman)
 
-gwasResults <- read.table("allpd.fastGWA", header=TRUE, stringsAsFactors=FALSE)
+data <- read.table("allpd.fastGWA", header=TRUE, stringsAsFactors=FALSE)
 
+manhattan(data, main = "Manhattan Plot (Dermatitis)", 
+          ylim = c(0, 10), 
+          cex = 0.6, 
+          cex.axis = 0.9, 
+          col = c("red", "blue"), 
+          suggestiveline = T, 
+          genomewideline = T, 
+          highlight=snpsOfInterest)
+
+qq(data$P, main = "Q-Q plot of Dermatitis GWAS", 
+   xlim = c(0, 7), 
+   ylim = c(0,12), 
+   pch = 18, 
+   col = "blue4", 
+   cex = 1.5, 
+   las = 1)
