@@ -23,8 +23,7 @@ manhattan(data, main = "Manhattan Plot (Dermatitis)",
           cex.axis = 0.9, 
           col = c("red", "blue"), 
           suggestiveline = T, 
-          genomewideline = T, 
-          highlight=snpsOfInterest)
+          genomewideline = T)
 
 qq(data$P, main = "Q-Q plot of Dermatitis GWAS", 
    xlim = c(0, 7), 
