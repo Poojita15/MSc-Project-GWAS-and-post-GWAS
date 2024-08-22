@@ -1,0 +1,17 @@
+# Specify output directory
+outdir: /data/scratch/bt23718/GWAS_project/GenoPred/pipeline/output_files/psoriasis/test/
+
+# Location of this config file
+config_file: /data/scratch/bt23718/GWAS_project/GenoPred/pipeline/input_files/config.yaml
+
+# Specify location of gwas_list file
+gwas_list: /data/scratch/bt23718/GWAS_project/GenoPred/pipeline/input_files/gwas_list.txt
+
+# Specify location of target_list file
+target_list: /data/scratch/bt23718/GWAS_project/GenoPred/pipeline/input_files/target_list.txt
+
+# Specify location of score_list file
+score_list: NA
+
+# Specify pgs_methods ('ptclump','dbslmm','prscs','sbayesr','lassosum','ldpred2','megaprs')
+pgs_methods: ['dbslmm']
