@@ -13,35 +13,37 @@ SUPERGNOVA- https://github.com/qlu-lab/SUPERGNOVA
 GenoPred- https://opain.github.io/GenoPred/
 PLINK2- https://www.cog-genomics.org/plink/2.0/ 
 
-To perform GWAS for papulosquamous disorders, run:
+STEP1: Retrieve data for GWAS
 
-gwaspd.sh, gwasmpd.sh, gwasfpd.sh
+To perform GWAS, begin by retrieving the necessary data from the main files. You can do this by executing the Retrieve_data.R script. This script will extract and organize the data required for subsequent analyses.
 
-To perform GWAS for dermatitis, run:
+STEP2: Perform GWAS analysis 
 
-gwasde.sh, gwasfde.sh, gwasmde.sh
+To perform GWAS for papulosquamous disorders, run: gwaspd.sh, gwasmpd.sh, gwasfpd.sh
 
-Step 2: Gene-Based Test Using GCTA Software
+To perform GWAS for dermatitis, run: gwasde.sh, gwasfde.sh, gwasmde.sh
 
-Before running the gene-based test, format the input files as required. Then, execute:
+STEP3: To visualise data using Manhattan plots and QQ plots execute: manhattan and QQ plots.R
 
-de.sh, pd.sh
+STEP 4: Gene-Based Test Using GCTA Software
 
-Step 3: Heritability and LD Intercept
+Before running the gene-based test, format the input files as required, run fastBAT.sh. 
+
+Then, execute: de.sh, pd.sh
+
+STEP 5: Heritability and LD Intercept
 
 Install LDSC: Follow the installation instructions provided on the LDSC GitHub repository.
 
-Format the summary statistics using 'munge_sumstats.py' from the LDSC package, then run:
+Format the summary statistics using 'munge_sumstats.py' from the LDSC package, then run: LD.sh
 
-LD.sh
-
-Step4: Local Genetic correlations 
+STEP 6: Local Genetic correlations 
 
 Insall SUPERGNOVA: Follow the installation instructions provided on the SUPERGNOVA GitHub repository.
 
 Use the summary statistics formatted by munge_sumstats.py, and then execute the script: correlation.py
 
-Step 5: Polygenic Risk Scores
+STEP 7: Polygenic Risk Scores
 
 Install GenoPred: Follow the installation instructions provided on the GenoPred GitHub repository.
 
