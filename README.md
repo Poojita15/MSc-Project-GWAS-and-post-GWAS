@@ -15,22 +15,17 @@ PLINK2- https://www.cog-genomics.org/plink/2.0/
 
 To perform GWAS for papulosquamous disorders, run:
 
-gwaspd.sh
-gwasmpd.sh
-gwasfpd.sh
+gwaspd.sh, gwasmpd.sh, gwasfpd.sh
 
 To perform GWAS for dermatitis, run:
 
-gwasde.sh
-gwasfde.sh
-gwasmde.sh
+gwasde.sh, gwasfde.sh, gwasmde.sh
 
 Step 2: Gene-Based Test Using GCTA Software
 
 Before running the gene-based test, format the input files as required. Then, execute:
 
-de.sh
-pd.sh
+de.sh, pd.sh
 
 Step 3: Heritability and LD Intercept
 
