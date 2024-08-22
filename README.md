@@ -2,9 +2,9 @@ MSc-Project-GWAS-and-post-GWAS
 
 A repository of files used in my six months group project: " Genentic basics of psoriasis and atopic dermatitis"
 
-#Please be aware that the file paths in this project are set according to the original development environment. You will need to update these paths according to your own system configuration. Ensure that all file paths in the code point to the correct directories on your system before running the project.
+Important Note: The file paths in this project are configured for the original development environment. Before running the project, you must update these paths to match your system's configuration. Ensure that all file paths in the code are correctly directed to your directories.
 
-The command line tools i've used are written and developed by others and full credits go tto the respective authors. 
+Acknowledgments: The command-line tools used in this project were developed by others, and full credit goes to the respective authors.
 
 For more information about the tools that i've used: 
 GCTA- https://yanglab.westlake.edu.cn/software/gcta/#Overview 
@@ -13,6 +13,44 @@ SUPERGNOVA- https://github.com/qlu-lab/SUPERGNOVA
 GenoPred- https://opain.github.io/GenoPred/
 PLINK2- https://www.cog-genomics.org/plink/2.0/ 
 
-Step 1- Run GWAS 
+To perform GWAS for papulosquamous disorders, run:
 
-GWAS scripts for papulosqamous disorders - Run gwaspd.sh, gwasmpd.sh, gwasfpd.sh
+gwaspd.sh
+gwasmpd.sh
+gwasfpd.sh
+
+To perform GWAS for dermatitis, run:
+
+gwasde.sh
+gwasfde.sh
+gwasmde.sh
+
+Step 2: Gene-Based Test Using GCTA Software
+
+Before running the gene-based test, format the input files as required. Then, execute:
+
+de.sh
+pd.sh
+
+Step 3: Heritability and LD Intercept
+
+Format the summary statistics using 'munge_sumstats.py' from the LDSC package, then run:
+
+LD.sh
+
+Use the summary statistics formatted by munge_sumstats.py, and then execute the script:
+
+correlation.py
+
+Step 5: Polygenic Risk Scores
+
+
+
+
+
+
+
+
+
+
+
