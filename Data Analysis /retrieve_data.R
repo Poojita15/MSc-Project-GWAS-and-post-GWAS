@@ -107,5 +107,4 @@ write.table(male_df,
             row.names = FALSE, 
             col.names = TRUE)
 
-######################################
 
